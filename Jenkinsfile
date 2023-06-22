@@ -7,9 +7,9 @@ pipeline{
             }
         }
         stage('Initialize'){
-        def dockerHome = tool 'docker'
-        env.PATH = "${dockerHome}/bin:${env.PATH}"
-    }
+            def dockerHome = tool 'docker'
+            env.PATH = "${dockerHome}/bin:${env.PATH}"
+        }
         stage("Docker Build"){
             steps{
                 sh 'docker build -t amimau:1 .'
