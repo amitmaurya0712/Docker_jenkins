@@ -8,11 +8,9 @@ pipeline{
         }
     }
 
-    stages{
         stage("Docker Build"){
             steps{
                 sh 'docker build -t amimau:1 .'
             }
         }
-    }
 }
